@@ -17,11 +17,6 @@ export default function Home() {
 
     return (
         <main className="home">
-            <h1>Background Image Debug</h1>
-
-            <img src="/assets/images/top-background.png" />
-
-            {/* Your existing hero and sections here */}
             {/* Hero */}
 
             <section className="hero">
