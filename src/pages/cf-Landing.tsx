@@ -19,9 +19,18 @@ export default function Home() {
         <main className="home">
             {/* Hero */}
 
-            <section className="hero">
+            <section
+                className="hero"
+                style={{
+                    backgroundImage: `linear-gradient(to top, rgba(24, 24, 24, 1) 0rem, rgba(0, 0, 0, 0) 4rem), url('/top-background.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    padding: '5rem 1.5rem',
+                    textAlign: 'center',
+                }}
+            >
                 <h1 className="hero-title">Critical Fix</h1>
-
                 <p className="hero-subtitle">
                     A chaotic card game for IT pros and disaster-prone data centers. The first to fix 7 servers wins.
                 </p>
