@@ -1,6 +1,8 @@
 import replaceMe from '../assets/replace_Me.png';
 import './Home.css';
 
+
+
 function Section({ title, children }: { title: string; children?: React.ReactNode }) {
     return (
         <section className="section">
@@ -15,9 +17,16 @@ export default function Home() {
 
     return (
         <main className="home">
+            <h1>Background Image Debug</h1>
+
+            <img src="/assets/images/top-background.png" />
+
+            {/* Your existing hero and sections here */}
             {/* Hero */}
+
             <section className="hero">
                 <h1 className="hero-title">Critical Fix</h1>
+
                 <p className="hero-subtitle">
                     A chaotic card game for IT pros and disaster-prone data centers. The first to fix 7 servers wins.
                 </p>
