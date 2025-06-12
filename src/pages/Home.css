@@ -7,7 +7,7 @@
 
 .hero {
     background-image:
-        linear-gradient(to top, rgb(24, 24, 24, 1)0rem, rgba(0, 0, 0, 0)4rem), url('/assets/top-background.png');
+        linear-gradient(to top, rgb(24, 24, 24, 1)0rem, rgba(0, 0, 0, 0)4rem), url('/assets/images/top-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
