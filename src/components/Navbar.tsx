@@ -1,0 +1,104 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
+import logo from '../assets/logo.png';
+
+function getTimeRemaining(targetDate: Date) {
+  const total = targetDate.getTime() - new Date().getTime();
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  return { total, days, hours, minutes, seconds };
+}
+
+function Navbar() {
+  const targetDate = new Date('2025-08-01T00:00:00');
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeRemaining(targetDate));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return (
+    <header className="navbar-header">
+      <div className="countdown-bar">
+        <div className="countdown-text">
+
+          <div className="countdown-digits">
+            <p className="countdown-label">Our Kickstarter starts in:     </p>
+            <div>
+              <span>{timeLeft.days.toString().padStart(2, '0')}</span>
+              <small>days</small>
+            </div>
+            <div className="colon">:</div>
+            <div>
+              <span>{timeLeft.hours.toString().padStart(2, '0')}</span>
+              <small>hours</small>
+            </div>
+            <div className="colon">:</div>
+            <div>
+              <span>{timeLeft.minutes.toString().padStart(2, '0')}</span>
+              <small>minutes</small>
+            </div>
+            <div className="colon">:</div>
+            <div>
+              <span>{timeLeft.seconds.toString().padStart(2, '0')}</span>
+              <small>seconds</small>
+            </div>
+          </div>
+        </div>
+
+
+        <a
+          href="https://www.kickstarter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="learn-more-button"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <div className="navbar">
+        <div className="navbar-inner">
+          <Link to="/" className="logo-link">
+            <img src={logo} alt="Critical Fix Logo" className="logo-image" />
+          </Link>
+
+          <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? '✖' : '☰'}
+          </button>
+
+          <nav className="nav-links">
+            <Link to="/cards">Cards</Link>
+            <Link to="/learn">Learn</Link>
+            <Link to="/lore">Lore</Link>
+            <Link to="/events">Events</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/shop" className="shop-button">Shop</Link>
+          </nav>
+        </div>
+
+        {menuOpen && (
+          <div className="mobile-nav">
+            <Link to="/cards" onClick={() => setMenuOpen(false)}>Cards</Link>
+            <Link to="/learn" onClick={() => setMenuOpen(false)}>Learn</Link>
+            <Link to="/lore" onClick={() => setMenuOpen(false)}>Lore</Link>
+            <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+            <Link to="/shop" className="shop-button" onClick={() => setMenuOpen(false)}>Shop</Link>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
