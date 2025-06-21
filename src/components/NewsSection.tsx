@@ -1,22 +1,20 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+
+interface TwitterWidgets {
+    widgets: {
+        load: () => void;
+    };
+}
+
+declare global {
+    interface Window {
+        twttr?: TwitterWidgets;
+    }
+}
 
 export default function NewsSection() {
-    const scriptLoaded = useRef(false); // avoids double loading in dev
-
     useEffect(() => {
-        if (scriptLoaded.current) {
-            window.twttr?.widgets?.load();
-            return;
-        }
-
-        const script = document.createElement('script');
-        script.src = 'https://platform.twitter.com/widgets.js';
-        script.async = true;
-        script.onload = () => {
-            window.twttr?.widgets?.load();
-            scriptLoaded.current = true;
-        };
-        document.body.appendChild(script);
+        window.twttr?.widgets?.load();
     }, []);
 
     return (
