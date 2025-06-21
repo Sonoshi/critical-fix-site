@@ -1,33 +1,27 @@
 import { useEffect } from 'react';
 
-interface TwitterWidgets {
-    widgets: {
-        load: () => void;
-    };
-}
-
-declare global {
-    interface Window {
-        twttr?: TwitterWidgets;
-    }
-}
-
 export default function NewsSection() {
     useEffect(() => {
-        window.twttr?.widgets?.load();
+        const script = document.createElement('script');
+        script.src = 'https://assets.juicer.io/embed.js';
+        script.async = true;
+        document.body.appendChild(script);
     }, []);
 
     return (
-        <section className="section">
-            <h2 className="section-title">News & Updates</h2>
-            <a
-                className="twitter-timeline"
-                data-theme="dark"
-                data-height="600"
-                href="https://twitter.com/CriticalFix"
-            >
-                Tweets by @CriticalFix
-            </a>
-        </section>
+        <>
+            {/* Inject Juicer styles */}
+            <link
+                rel="stylesheet"
+                href="https://assets.juicer.io/embed.css"
+                type="text/css"
+            />
+
+            {/* Juicer Feed */}
+            <section className="section">
+                <h2 className="section-title">News & Updates</h2>
+                <div className="juicer-feed" data-feed-id="criticalfix"></div>
+            </section>
+        </>
     );
 }

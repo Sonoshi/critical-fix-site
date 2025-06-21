@@ -48,9 +48,8 @@ export default function Home() {
             </section>
 
             {/* News */}
-            <Section title="Critical Fix News!">
-                <NewsSection />
-            </Section>
+            <NewsSection />
+
 
             {/* Featured Cards */}
             <Section title="Featured Cards">
