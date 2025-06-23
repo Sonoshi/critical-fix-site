@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import logo from '../assets/logo.png';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 function getTimeRemaining(targetDate: Date) {
   const total = targetDate.getTime() - new Date().getTime();
@@ -13,7 +13,7 @@ function getTimeRemaining(targetDate: Date) {
 }
 
 function Navbar() {
-  const targetDate = new Date('2025-08-01T00:00:00');
+  const targetDate = new Date("2025-08-01T00:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,31 +28,29 @@ function Navbar() {
     <header className="navbar-header">
       <div className="countdown-bar">
         <div className="countdown-text">
-
           <div className="countdown-digits">
-            <p className="countdown-label">Our Kickstarter starts in:     </p>
+            <div className="countdown-label">Kickstarter coming soon:</div>
             <div>
-              <span>{timeLeft.days.toString().padStart(2, '0')}</span>
+              <span>{timeLeft.days.toString().padStart(2, "0")}</span>
               <small>days</small>
             </div>
             <div className="colon">:</div>
             <div>
-              <span>{timeLeft.hours.toString().padStart(2, '0')}</span>
+              <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
               <small>hours</small>
             </div>
             <div className="colon">:</div>
             <div>
-              <span>{timeLeft.minutes.toString().padStart(2, '0')}</span>
+              <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
               <small>minutes</small>
             </div>
             <div className="colon">:</div>
             <div>
-              <span>{timeLeft.seconds.toString().padStart(2, '0')}</span>
+              <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
               <small>seconds</small>
             </div>
           </div>
         </div>
-
 
         <a
           href="https://www.kickstarter.com/"
@@ -71,29 +69,45 @@ function Navbar() {
           </Link>
 
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? '✖' : '☰'}
+            {menuOpen ? "✖" : "☰"}
           </button>
 
           <nav className="nav-links">
-            <Link to="/cards">Cards</Link>
-            <Link to="/learn">Learn</Link>
-            <Link to="/lore">Lore</Link>
-            <Link to="/events">Events</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/shop" className="shop-button">Shop</Link>
+            <a href="#news">News</a>
+            <a href="#community">Community</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <Link to="#shop" className="shop-button">
+              Shop
+              <br />
+              <span className="coming-soon">(Coming Soon)</span>
+            </Link>
           </nav>
         </div>
 
         {menuOpen && (
           <div className="mobile-nav">
-            <Link to="/cards" onClick={() => setMenuOpen(false)}>Cards</Link>
-            <Link to="/learn" onClick={() => setMenuOpen(false)}>Learn</Link>
-            <Link to="/lore" onClick={() => setMenuOpen(false)}>Lore</Link>
-            <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
-            <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-            <Link to="/shop" className="shop-button" onClick={() => setMenuOpen(false)}>Shop</Link>
+            <a href="#news" onClick={() => setMenuOpen(false)}>
+              News
+            </a>
+            <a href="#community" onClick={() => setMenuOpen(false)}>
+              Community
+            </a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About Us
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+            <Link
+              to="/shop"
+              className="shop-button"
+              onClick={() => setMenuOpen(false)}
+            >
+              Shop
+              <br />
+              <span className="coming-soon">(Coming Soon)</span>
+            </Link>
           </div>
         )}
       </div>
