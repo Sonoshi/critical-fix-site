@@ -77,7 +77,7 @@ function Navbar() {
             <a href="#community">Community</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
-            <Link to="#shop" className="shop-button">
+            <Link to="#shop" className="styled-button">
               Shop
               <br />
               <span className="coming-soon">(Coming Soon)</span>
@@ -101,7 +101,7 @@ function Navbar() {
             </a>
             <Link
               to="/shop"
-              className="shop-button"
+              className="styled-button"
               onClick={() => setMenuOpen(false)}
             >
               Shop

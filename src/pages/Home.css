@@ -16,7 +16,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* padding: 5rem 1.5rem; */
   text-align: center;
 }
 
@@ -36,6 +35,17 @@
   font-size: 1.25rem;
   max-width: 40rem;
   margin: 0 auto 1.5rem;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1),
+    0 0 3px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1),
+    0 0 6px rgba(0, 0, 0, 1), 0 0 7px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1),
+    0 0 9px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 1),
+    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-main-list-text {
+  font-size: 1.25rem;
+  max-width: 40rem;
+  margin: 1rem auto 0.5rem;
   text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1),
     0 0 3px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1),
     0 0 6px rgba(0, 0, 0, 1), 0 0 7px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1),
@@ -106,9 +116,9 @@
   margin: 0 auto 1.5rem;
 }
 
-.reserve-button {
+.styled-button {
   display: inline-block;
-  background-color: #22c55e;
+  background-color: #3b82f6;
   color: white;
   font-weight: bold;
   padding: 0.75rem 1.5rem;
@@ -117,6 +127,51 @@
   transition: background-color 0.3s;
 }
 
-.reserve-button:hover {
-  background-color: #16a34a;
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.styled-button:hover {
+  background-color: #2563eb;
+  color: black;
+}
+
+.mailing-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .mailing-list-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.mailing-input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  color: #ffffff;
+  background-color: #111111;
+}
+
+/* Needed so navbar scrolling will show the section title - (It doesn't take the navbar into consideration when scrolling) */
+html {
+  scroll-padding-top: 200px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 300px;
+  }
 }
