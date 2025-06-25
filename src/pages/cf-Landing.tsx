@@ -37,7 +37,7 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <h1 className="hero-title">Critical Fix</h1>
+        <h1 className="hero-title">Critical-Fix</h1>
         <p className="hero-subtitle">
           <strong>Critical-Fix</strong> is a fast-paced, IT-themed card game
           where you and your fellow data center techs compete to resolve seven
