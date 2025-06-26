@@ -15,7 +15,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }
     const url = `https://${env.MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${env.MAILCHIMP_LIST_ID}/members`;
 
-    const mcRes = await fetch("https://critical-fix.us13.list-manage.com/subscribe/post", {
+    const mcRes = await fetch(url, {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${env.MAILCHIMP_API_KEY}`,
@@ -26,7 +26,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
             status: "subscribed",
         }),
     });
-    const text = await mcRes.json();
+    const result = await mcRes.json();
 
 
     if (mcRes.ok) {
