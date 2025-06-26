@@ -29,12 +29,18 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     const result = await mcRes.json();
 
 
-    if (mcRes.ok) {
+    if (mcRes.ok && !result.status) {
+        // Success with no error in body
         return new Response(JSON.stringify({ success: true }), {
             headers: { "Content-Type": "application/json" },
         });
     } else {
-        return new Response(JSON.stringify({ success: false, error: result.detail || "Mailchimp error" }), {
+        // Fail or warning
+        return new Response(JSON.stringify({
+            success: false,
+            error: result.detail || "Mailchimp error",
+            debug: result
+        }), {
             status: 500,
             headers: { "Content-Type": "application/json" },
         });
