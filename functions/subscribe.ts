@@ -1,3 +1,6 @@
+import type { PagesFunction } from "@cloudflare/workers-types";
+
+
 export const onRequestPost: PagesFunction = async ({ request }) => {
     const { email } = await request.json().catch(() => ({}));
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -19,6 +22,7 @@ export const onRequestPost: PagesFunction = async ({ request }) => {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
+        redirect: "manual" as "manual"
     });
 
     // Mailchimp always redirects, so we treat it as success no matter what
