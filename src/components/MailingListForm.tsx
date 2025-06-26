@@ -2,23 +2,39 @@ import { useState } from "react";
 
 export default function MailingListForm() {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "loading">("idle");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
-    // Allow time for native submit to fire before clearing. Kind of jank.
-    setTimeout(() => {
-      setEmail("");
-    }, 100);
-  };
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    setMessage("");
+    try {
+      const res = await fetch("/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("success");
+        setMessage("Thanks for signing up!");
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(result.error || "Something went wrong.");
+      }
+    } catch (err) {
+      setStatus("error");
+      setMessage("Network error. Please try again.");
+    }
+  }
 
   return (
-    <form
-      action="https://critical-fix.us13.list-manage.com/subscribe/post?u=340b27d5ec3b9c1de316684b2&amp;id=35d9d69a10&amp;f_id=0048e1e5f0"
-      method="POST"
-      className="mailing-list-form"
-      target="_blank"
-      noValidate
-      onSubmit={handleSubmit}
-    >
+    <form onSubmit={handleSubmit} className="mailing-list-form">
+
       <input
         required
         type="email"
@@ -28,9 +44,10 @@ export default function MailingListForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type="submit" className="styled-button">
-        Submit
+      <button type="submit" className="styled-button" disabled={status === "loading"}>
+        {status === "loading" ? "Submitting..." : "Submit"}
       </button>
+      {message && <p className={`form-status ${status}`}>{message}</p>}
     </form>
   );
 }
