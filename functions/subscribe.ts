@@ -46,12 +46,15 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
                 headers: { "Content-Type": "application/json" },
             });
         } else {
+            const safeStatus = typeof result.status === "number" && result.status >= 200 && result.status <= 599
+                ? result.status
+                : 500;
             return new Response(JSON.stringify({
                 success: false,
                 error: result.detail || result.title || "Mailchimp error",
                 debug: result,
             }), {
-                status: result.status || 500,
+                status: safeStatus,
                 headers: { "Content-Type": "application/json" },
             });
         }
