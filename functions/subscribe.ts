@@ -1,7 +1,11 @@
 import type { PagesFunction } from "@cloudflare/workers-types";
+interface Env {
+    MAILCHIMP_API_KEY: string;
+    MAILCHIMP_LIST_ID: string;
+    MAILCHIMP_SERVER_PREFIX: string;
+}
 
-
-export const onRequestPost: PagesFunction = async ({ request }) => {
+export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     const { email } = await request.json().catch(() => ({}));
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return new Response(JSON.stringify({ success: false, error: "Invalid email" }), {
@@ -9,28 +13,30 @@ export const onRequestPost: PagesFunction = async ({ request }) => {
             headers: { "Content-Type": "application/json" },
         });
     }
-
-    // Forward to Mailchimp
-    const formData = new URLSearchParams({
-        EMAIL: email,
-        u: "340b27d5ec3b9c1de316684b2",
-        id: "35d9d69a10",
-        // f_id: "0048e1e5f0", 
-    });
+    const url = `https://${env.MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${env.MAILCHIMP_LIST_ID}/members`;
 
     const mcRes = await fetch("https://critical-fix.us13.list-manage.com/subscribe/post", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString(),
-        redirect: "manual"
+        headers: {
+            "Authorization": `Bearer ${env.MAILCHIMP_API_KEY}`,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            email_address: email,
+            status: "subscribed",
+        }),
     });
-    const text = await mcRes.text();
-    // log or return the body so you can debug
-    console.log("Mailchimp response:", text);
+    const text = await mcRes.json();
 
 
-    // Mailchimp always redirects, so we treat it as success no matter what
-    return new Response(JSON.stringify({ success: true, debug: text }), {
-        headers: { "Content-Type": "application/json" },
-    });
+    if (mcRes.ok) {
+        return new Response(JSON.stringify({ success: true }), {
+            headers: { "Content-Type": "application/json" },
+        });
+    } else {
+        return new Response(JSON.stringify({ success: false, error: result.detail || "Mailchimp error" }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+        });
+    }
 };
