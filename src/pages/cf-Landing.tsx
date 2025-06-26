@@ -29,8 +29,10 @@ export default function Home() {
       <section className="hero">
         <h1 className="hero-title">Critical-Fix</h1>
         <p className="hero-subtitle">
-          <strong>Critical-Fix</strong> A fast-paced, IT-themed card game where you and your coworkers race to fix seven broken servers before anyone else.
-          Sabotage rivals, hoard parts, and survive a day’s worth of tech nightmares in one chaotic deck.
+          <strong>Critical-Fix</strong> A fast-paced, IT-themed card game where
+          you and your coworkers race to fix seven broken servers before anyone
+          else. Sabotage rivals, hoard parts, and survive a day’s worth of tech
+          nightmares in one chaotic deck.
         </p>
 
         {/* Email Sign-up */}
@@ -55,23 +57,32 @@ export default function Home() {
             ></iframe>
           </div>
           <p>
-            In <strong>Critical Fix</strong>, you're a data center technician racing to fix <strong>7 server tickets</strong> before anyone else.
+            In <strong>Critical Fix</strong>, you're a data center technician
+            racing to fix <strong>7 server tickets</strong> before anyone else.
           </p>
           <ul>
-            <li>Use <strong>Part cards</strong> to repair hardware failures</li>
-            <li><strong>Outsmart opponents</strong> with clever plays</li>
-            <li><strong>Reopen their Tickets</strong> to stall their progress</li>
-            <li><strong>Stack new problems</strong> for more points and chaos</li>
+            <li>
+              Use <strong>Part cards</strong> to repair hardware failures
+            </li>
+            <li>
+              <strong>Outsmart opponents</strong> with clever plays
+            </li>
+            <li>
+              <strong>Reopen their Tickets</strong> to stall their progress
+            </li>
+            <li>
+              <strong>Stack new problems</strong> for more points and chaos
+            </li>
           </ul>
           <p>
-            Every Ticket goes into <strong>Testing and Resolves</strong> — unless someone reopens it first. The more a Ticket gets reopened, the more it's worth.
-          </p>
-
-          <p>
-            Only the most cunning, ruthless, and lucky technician will survive the chaos and fix 7 Tickets to win the game and make management happy. For now…
+            Every Ticket goes into <strong>Testing and Resolves</strong> —
+            unless someone reopens it first. The more a Ticket gets reopened,
+            the more it's worth.
           </p>
           <p>
-            .
+            Only the most cunning, ruthless, and lucky technician will survive
+            the chaos and fix 7 Tickets to win the game and make management
+            happy. For now…
           </p>
         </div>
       </Section>
