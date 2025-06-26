@@ -6,7 +6,7 @@ interface Env {
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-    const { email } = await request.json().catch(() => ({}));
+    const { email } = await request.json().then(data => data as { email?: string }).catch(() => ({}));
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return new Response(JSON.stringify({ success: false, error: "Invalid email" }), {
             status: 400,
@@ -26,7 +26,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
             status: "subscribed",
         }),
     });
-    const result = await mcRes.json();
+    const result = await mcRes.json().then(data => data as Record<string, any>);
     if (mcRes.ok && !result.status) {
         // Success with no error in body
         return new Response(JSON.stringify({ success: true }), {
