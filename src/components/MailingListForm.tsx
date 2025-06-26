@@ -16,16 +16,17 @@ export default function MailingListForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      const result = await res.json();
-
-      if (result.success) {
-        setStatus("success");
-        setMessage("Thanks for signing up!");
-        setEmail("");
-      } else {
+      if (!res.ok) {
+        const error = await res.json().catch(() => ({}));
         setStatus("error");
-        setMessage(result.error || "Something went wrong.");
+        setMessage(error?.error || "Something went wrong.");
+        return;
       }
+
+      const result = await res.json();
+      setStatus("success");
+      setMessage("Thanks for signing up!");
+      setEmail("");
     } catch (err) {
       setStatus("error");
       setMessage("Network error. Please try again.");
