@@ -87,7 +87,7 @@
 
 @media (max-width: 767px) {
   .countdown-text {
-    gap: 2rem;
+    flex-direction: column;
   }
 }
 
