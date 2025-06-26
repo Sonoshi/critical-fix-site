@@ -41,7 +41,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
         const result = await mcRes.json().catch(() => ({})) as MailchimpResponse;
 
-        if (mcRes.ok && !result.status) {
+        if (mcRes.ok) {
             return new Response(JSON.stringify({ success: true }), {
                 headers: { "Content-Type": "application/json" },
             });
