@@ -28,8 +28,8 @@ function Navbar() {
     <header className="navbar-header">
       <div className="countdown-bar">
         <div className="countdown-text">
+          <div className="countdown-label">Kickstarter coming soon:</div>
           <div className="countdown-digits">
-            <div className="countdown-label">Kickstarter coming soon:</div>
             <div>
               <span>{timeLeft.days.toString().padStart(2, "0")}</span>
               <small>days</small>
