@@ -23,7 +23,7 @@ export default function MailingListForm() {
         return;
       }
 
-      const result = await res.json();
+      await res.json();
       setStatus("success");
       setMessage("Thanks for signing up!");
       setEmail("");
