@@ -44,8 +44,29 @@ export default function Home() {
       {/* What is Critical Fix? */}
       <Section id="whatDis" title="What is Critical Fix?">
         <div className="section-text">
+          <div
+            className="video-placeholder"
+            title="Coming Soon"
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: "560px",
+              margin: "0 auto 2rem",
+              cursor: "not-allowed",
+            }}
+          >
+            <img
+              src="/assets/images/video_coming_soon.png"
+              alt="Critical Fix video coming soon"
+              style={{
+                width: "100%",
+                borderRadius: "8px",
+                opacity: 0.8,
+              }}
+            />
+          </div>
           {/* YouTube Embed */}
-          <div className="video-container">
+          {/* <div className="video-container">
             <iframe
               width="560"
               height="315"
@@ -55,7 +76,7 @@ export default function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
           <p>
             In <strong>Critical Fix</strong>, you're a data center technician
             racing to fix <strong>7 server tickets</strong> before anyone else.
