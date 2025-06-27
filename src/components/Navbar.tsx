@@ -52,14 +52,14 @@ function Navbar() {
           </div>
         </div>
 
-        <a
+        {/* <a
           href="https://www.kickstarter.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="learn-more-button"
         >
           Learn More
-        </a>
+        </a> */}
       </div>
 
       <div className="navbar">
