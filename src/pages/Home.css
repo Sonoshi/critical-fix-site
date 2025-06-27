@@ -182,6 +182,10 @@
   color: black;
 }
 
+.styled-button:disabled {
+  cursor: not-allowed;
+}
+
 .mailing-list-form {
   display: flex;
   align-items: center;
