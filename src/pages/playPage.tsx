@@ -1,7 +1,6 @@
 import "./Home.css";
 import MailingListForm from "../components/MailingListForm";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 function Section({
     id,
