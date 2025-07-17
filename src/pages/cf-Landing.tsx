@@ -1,7 +1,8 @@
 import "./Home.css";
 import NewsSection from "../components/NewsSection";
-
 import MailingListForm from "../components/MailingListForm";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Section({
   id,
@@ -23,6 +24,20 @@ function Section({
 }
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <main className="home">
       {/* Hero */}

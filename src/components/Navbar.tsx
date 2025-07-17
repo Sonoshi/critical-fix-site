@@ -13,7 +13,7 @@ function getTimeRemaining(targetDate: Date) {
 }
 
 function Navbar() {
-  const targetDate = new Date("2025-08-01T00:00:00");
+  const targetDate = new Date("2025-09-01T00:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -73,10 +73,11 @@ function Navbar() {
           </button>
 
           <nav className="nav-links">
-            <a href="#news">News</a>
-            <a href="#community">Community</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+            <Link to="/" state={{ scrollTo: "news" }}>News</Link>
+            <Link to="/" state={{ scrollTo: "community" }}>Community</Link>
+            <Link to="/" state={{ scrollTo: "about" }}>About Us</Link>
+            <Link to="/" state={{ scrollTo: "contact" }}>Contact</Link>
+            <Link to="/Play">Play!</Link>
             <Link to="#shop" className="styled-button">
               Shop
               <br />
@@ -87,18 +88,11 @@ function Navbar() {
 
         {menuOpen && (
           <div className="mobile-nav">
-            <a href="#news" onClick={() => setMenuOpen(false)}>
-              News
-            </a>
-            <a href="#community" onClick={() => setMenuOpen(false)}>
-              Community
-            </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
-              About Us
-            </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
+            <Link to="/" state={{ scrollTo: "news" }} onClick={() => setMenuOpen(false)}>News</Link>
+            <Link to="/" state={{ scrollTo: "community" }} onClick={() => setMenuOpen(false)}>Community</Link>
+            <Link to="/" state={{ scrollTo: "about" }} onClick={() => setMenuOpen(false)}>About Us</Link>
+            <Link to="/" state={{ scrollTo: "contact" }} onClick={() => setMenuOpen(false)}>Contact</Link>
+            <Link to="/Play" onClick={() => setMenuOpen(false)}>Play!</Link>
             <Link
               to="/shop"
               className="styled-button"

@@ -9,15 +9,13 @@ export default function Footer() {
         <div className="footer-section" id="about">
           <h2 className="footer-title">About Us</h2>
           <p className="section-text">
-            We're three data center techs who turned our daily chaos into a card
+            We're 3 data center techs who turned our daily chaos into a card
             game. <strong>Critical-Fix</strong> is our love letter to tech
             culture. What started as a breakroom joke quickly grew into a fully
             playable card game that captures the absurd reality of solving
             tickets, scrambling for parts, and dealing with a bit of friendly
-            competition. We set out to recreate the mix of urgency, teamwork,
-            and everyday chaos we face on the job. Now, instead of being stuck
-            in a server room, you can experience it all from the comfort of your
-            kitchen table.
+            competition. Now, instead of being stuck in a server room, you
+            can experience it all from the comfort of your kitchen table.
           </p>
         </div>
 

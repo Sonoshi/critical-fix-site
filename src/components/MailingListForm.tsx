@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function MailingListForm() {
+export default function MailingListForm({
+  onSuccess,
+}: {
+  onSuccess?: () => void;
+}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<
     "idle" | "success" | "error" | "loading"
@@ -28,6 +32,7 @@ export default function MailingListForm() {
       setStatus("success");
       setMessage("Thanks for signing up!");
       setEmail("");
+      if (onSuccess) onSuccess();
     } catch (err) {
       setStatus("error");
       setMessage("Network error. Please try again.");
