@@ -32,6 +32,7 @@ export default function MailingListForm({
       setStatus("success");
       setMessage("Thanks for signing up!");
       setEmail("");
+      localStorage.setItem("cf_signed_up", "true");
       if (onSuccess) onSuccess();
     } catch (err) {
       setStatus("error");

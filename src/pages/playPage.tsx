@@ -27,6 +27,11 @@ export default function PlayPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        const alreadySignedUp = localStorage.getItem("cf_signed_up") === "true";
+        if (alreadySignedUp) {
+            setSignedUp(true);
+        }
     }, []);
 
     function handleSignupSuccess() {
@@ -65,15 +70,27 @@ export default function PlayPage() {
                         just 3 pages, minimal cutting, and no special supplies required.
                     </p>
 
-                    <img src="/assets/images/pnp_preview.png" alt="Print & Play Preview" className="image-break" />
 
+                    <img
+                        src="/assets/images/data_center_mess.jpg"
+                        alt="Tech chaos"
+                        className="image-break"
+                        style={{ maxWidth: "600px", maxHeight: "300px", objectFit: "cover" }}
+                    />
                     <p>
                         While it’s not built for long-term replayability, this mini deck is a great way to
                         introduce friends, coworkers, or your unlucky roommates to the <strong>beautiful
                             disaster that is working in a data center</strong>.
                     </p>
 
-                    <img src="/assets/images/data_center_mess.png" alt="Tech chaos" className="image-break" />
+
+                    <img
+                        src="/assets/images/pnp_preview.jpg"
+                        alt="Print & Play Preview"
+                        className="image-break"
+                        style={{ maxWidth: "600px", maxHeight: "300px", objectFit: "cover" }}
+                    />
+
 
                     <p>
                         Whether you’ve lived through fried CPUs and cable spaghetti yourself, or you just want
