@@ -67,6 +67,7 @@ export default function PlayPage() {
 
   function handleSignupSuccess() {
     setSignedUp(true);
+    sendDiscordMessage();
 
     // Automatically trigger file download
     const link = document.createElement("a");
