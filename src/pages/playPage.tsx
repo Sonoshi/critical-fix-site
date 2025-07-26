@@ -71,8 +71,8 @@ export default function PlayPage() {
 
     // Automatically trigger file download
     const link = document.createElement("a");
-    link.href = "/assets/Critical_Fix_PnP.zip";
-    link.download = "Critical_Fix_PnP.zip";
+    link.href = "/assets/Critical_Fix_PnP_v2.zip";
+    link.download = "Critical_Fix_PnP_v2.zip";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -151,7 +151,7 @@ export default function PlayPage() {
                 You're in! Here's your download:
               </p>
               <a
-                href="/assets/Critical_Fix_PnP.zip"
+                href="/assets/Critical_Fix_PnP_v2.zip"
                 download
                 className="download-button"
                 onClick={sendDiscordMessage}
