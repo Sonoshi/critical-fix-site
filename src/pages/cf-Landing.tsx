@@ -133,14 +133,45 @@ export default function Home() {
           Be part of the community! Join our Discord to meet fellow players and
           share feedback.
         </p>
-        <iframe
+        <a
+          href="https://discord.com/invite/wRDDjPkr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="discord-button"
+        >
+          Join our Discord
+        </a>
+
+        <style>{`
+    .discord-button {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 12px;
+      background: #5865F2;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 4px 10px rgba(88,101,242,0.4);
+    }
+    .discord-button:hover {
+      background: #4752c4;
+      transform: translateY(-2px);
+    }
+    .discord-button:active {
+      transform: translateY(0);
+    }
+  `}</style>
+
+        {/* <iframe
           src="https://discord.com/widget?id=1383011396127559730&theme=dark"
           width="350"
           height="500"
           // allowTransparency={true}
           frameBorder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe>
+        ></iframe> */}
       </Section>
 
       {/* Featured Cards
