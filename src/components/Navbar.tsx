@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
-function getTimeRemaining(targetDate: Date) {
-  const total = targetDate.getTime() - new Date().getTime();
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  return { total, days, hours, minutes, seconds };
-}
+// function getTimeRemaining(targetDate: Date) {
+//   const total = targetDate.getTime() - new Date().getTime();
+//   const seconds = Math.floor((total / 1000) % 60);
+//   const minutes = Math.floor((total / 1000 / 60) % 60);
+//   const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+//   const days = Math.floor(total / (1000 * 60 * 60 * 24));
+//   return { total, days, hours, minutes, seconds };
+// }
 
 function Navbar() {
-  const targetDate = new Date("2025-09-01T00:00:00");
-  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
+  // const targetDate = new Date("2025-09-01T00:00:00");
+  // const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(getTimeRemaining(targetDate));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [targetDate]);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(getTimeRemaining(targetDate));
+  //   }, 1000);
+  //   return () => clearInterval(timer);
+  // }, [targetDate]);
 
   return (
     <header className="navbar-header">
-      <div className="countdown-bar">
+      {/* <div className="countdown-bar">
         <div className="countdown-text">
-          <div className="countdown-label">Kickstarter coming soon</div>
-          {/* <div className="countdown-digits">
+          <div className="countdown-label">Kickstarter coming soon:</div>
+          <div className="countdown-digits">
             <div>
               <span>{timeLeft.days.toString().padStart(2, "0")}</span>
               <small>days</small>
@@ -49,18 +49,18 @@ function Navbar() {
               <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
               <small>seconds</small>
             </div>
-          </div> */}
+          </div>
         </div>
 
-        {/* <a
+        <a
           href="https://www.kickstarter.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="learn-more-button"
         >
           Learn More
-        </a> */}
-      </div>
+        </a>
+      </div> */}
 
       <div className="navbar">
         <div className="navbar-inner">
