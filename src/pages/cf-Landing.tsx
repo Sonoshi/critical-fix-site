@@ -134,7 +134,7 @@ export default function Home() {
           share feedback.
         </p>
         <a
-          href="https://discord.com/invite/wRDDjPkr"
+          href="https://discord.gg/tkVWV5CBzh"
           target="_blank"
           rel="noopener noreferrer"
           className="discord-button"
