@@ -93,7 +93,12 @@ export default function PlayPage() {
 
       {/* Print and Play Section */}
       <Section id="pnp" title="🖨️ Print & Play Demo">
-        <div className="section-text">
+        <div
+          className="section-text"
+          style={{
+            marginBottom: "30px ",
+          }}
+        >
           <p>Want to try Critical Fix for yourself?</p>
           <p>
             Our <strong>Print & Play demo</strong> is a bite-sized version of
@@ -161,21 +166,66 @@ export default function PlayPage() {
             </>
           )}
         </div>
+
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center", // centers the group horizontally
+            gap: "1.5rem", // space between buttons
+            flexWrap: "wrap", // allows stacking on smaller screens
+            width: "100%", // keeps it relative to parent, still centered
+            marginBottom: "100px "
+          }}
+        >
+          <a
+            href="https://docs.google.com/document/d/1hFIuI4YvcFJqrcJPUr9oDg64I1kzVmUTsQnxahP7GVE/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              textAlign: "center",
+              padding: "12px 32px",
+              borderRadius: "12px",
+              backgroundColor: "#16a34a",
+              color: "white",
+              fontSize: "1.125rem",
+              fontWeight: "600",
+              textDecoration: "none",
+              boxShadow: "0px 4px 8px rgba(0,0,0,0.15)",
+              transition: "background-color 0.2s ease",
+              minWidth: "180px",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#15803d")}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#16a34a")}
+          >
+            🎲 Print and Play Rules
+          </a>
+        </div>
+
       </Section>
 
       {/* Tabletop Simulator */}
-      <Section id="tts" title="🕹️ Tabletop Simulator (Coming Soon)">
+      {/* <Section id="tts" title="🕹️ Tabletop Simulator (Coming Soon)">
         <div className="section-text">
           <p>
             We’re working on a digital Tabletop Simulator version so you can try
             the game online with friends. Stay tuned!
           </p>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Tabletopia */}
       <Section id="tts" title="🕹️ Tabletopia">
-        <div className="section-text flex justify-center">
+        <div className="section-text flex flex-col items-center"
+          style={{
+            gap: "1.5rem",
+          }}>
+          <p>
+            You can now play Critical Fix online on Tabletopia! Jump into the
+            chaos, fix Tickets and make management
+            happy. For now…
+          </p>
           <iframe
             width="680"
             height="340"
@@ -185,8 +235,67 @@ export default function PlayPage() {
             src="https://tabletopia.com/games/critical-fix-psip9r/680x340"
             title="Play Critical Fix on Tabletopia"
           />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center", // centers the group horizontally
+              gap: "1.5rem", // space between buttons
+              flexWrap: "wrap", // allows stacking on smaller screens
+              width: "100%", // keeps it relative to parent, still centered
+              marginTop: "30px "
+            }}
+          >
+            <a
+              href="https://docs.google.com/document/d/1zc2yBJS2TaYrYqvRyNnaTMWVxcuOj3AliPeCeudOOrI/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                textAlign: "center",
+                padding: "12px 32px",
+                borderRadius: "12px",
+                backgroundColor: "#2563eb",
+                color: "white",
+                fontSize: "1.125rem",
+                fontWeight: "600",
+                textDecoration: "none",
+                boxShadow: "0px 4px 8px rgba(0,0,0,0.15)",
+                transition: "background-color 0.2s ease",
+                minWidth: "180px",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#1d4ed8")}
+              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#2563eb")}
+            >
+              📖 Full Rules
+            </a>
+
+            <a
+              href="https://docs.google.com/document/d/1hFIuI4YvcFJqrcJPUr9oDg64I1kzVmUTsQnxahP7GVE/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                textAlign: "center",
+                padding: "12px 32px",
+                borderRadius: "12px",
+                backgroundColor: "#16a34a",
+                color: "white",
+                fontSize: "1.125rem",
+                fontWeight: "600",
+                textDecoration: "none",
+                boxShadow: "0px 4px 8px rgba(0,0,0,0.15)",
+                transition: "background-color 0.2s ease",
+                minWidth: "180px",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#15803d")}
+              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#16a34a")}
+            >
+              🎲 2-Player CF Mini Rules
+            </a>
+          </div>
         </div>
       </Section>
+
     </main>
   );
 }
