@@ -172,6 +172,21 @@ export default function PlayPage() {
           </p>
         </div>
       </Section>
+
+      {/* Tabletopia */}
+      <Section id="tts" title="🕹️ Tabletopia">
+        <div className="section-text flex justify-center">
+          <iframe
+            width="680"
+            height="340"
+            style={{ border: "none" }}
+            allowTransparency={true}
+            scrolling="no"
+            src="https://tabletopia.com/games/critical-fix-psip9r/680x340"
+            title="Play Critical Fix on Tabletopia"
+          />
+        </div>
+      </Section>
     </main>
   );
 }
