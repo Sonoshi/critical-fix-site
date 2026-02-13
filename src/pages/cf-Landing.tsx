@@ -41,9 +41,9 @@ export default function Home() {
     <main className="home">
       {/* Hero */}
       <section className="hero">
-        <h1 className="hero-title">Critical-Fix</h1>
+        <h1 className="hero-title">Critical Fix</h1>
         <p className="hero-subtitle">
-          <strong>Critical-Fix</strong> A fast-paced, IT-themed card game where
+          <strong>Critical Fix</strong> A fast-paced, IT-themed card game where
           you and your coworkers race to fix seven broken servers before anyone
           else. Sabotage rivals, hoard parts, and survive a day’s worth of tech
           nightmares in one chaotic deck.
@@ -92,12 +92,12 @@ export default function Home() {
             ></iframe>
           </div> */}
           <p>
-            Critical Fix is a fast-paced, IT-themed card game where 2–6 players
-            compete as Technicians racing to resolve support tickets before
-            their coworkers do. On your turn, you’ll open server Tickets, apply
-            Repair cards to fix broken parts, and send your work into Testing.
-            If your fix survives a full round without interference, the Ticket
-            Resolves and earns you points.
+            <strong>Critical Fix</strong> is a fast-paced, IT-themed card game
+            where 2–6 players compete as Technicians racing to resolve support
+            tickets before their coworkers do. On your turn, you’ll open server
+            Tickets, apply Repair cards to fix broken parts, and send your work
+            into Testing. If your fix survives a full round without
+            interference, the Ticket Resolves and earns you points.
           </p>
           <p>
             But in this office, your coworkers are your biggest obstacle.
