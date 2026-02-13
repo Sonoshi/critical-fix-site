@@ -1,11 +1,15 @@
-/* Navbar.css */
+/* Navbar.css - Industrial PCB Theme */
 
 .navbar-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: black;
+  border-bottom: 1px solid rgba(199, 167, 94, 0.5);
 }
+
+/* ===================== */
+/* COUNTDOWN BAR */
+/* ===================== */
 
 .countdown-bar {
   display: flex;
@@ -13,68 +17,10 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.75rem;
   gap: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .countdown-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .learn-more-button {
-    width: auto;
-    margin-top: 0;
-  }
-
-  .countdown-label {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    text-align: center;
-  }
-
-  .countdown-digits {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .countdown-text {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .countdown-label {
-    font-size: 1.25rem;
-    margin-bottom: 0.01rem;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .countdown-digits {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .learn-more-button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem;
-    box-sizing: border-box;
-  }
-
-  .countdown-text {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  background: #102a1f;
+  border-bottom: 1px solid #1a3a2b;
 }
 
 .countdown-text {
@@ -82,25 +28,13 @@
   flex-direction: row;
   align-items: center;
   font-weight: 600;
-  color: #1a1c23;
-}
-
-@media (max-width: 767px) {
-  .countdown-text {
-    flex-direction: column;
-  }
+  color: #d7f5e6;
 }
 
 .countdown-label {
   font-weight: 600;
-  color: #ffffff;
+  color: #c7a75e;
   align-self: center;
-}
-
-@media (min-width: 768px) {
-  .countdown-label {
-    transform: translateY(+0.25rem);
-  }
 }
 
 .countdown-digits {
@@ -109,12 +43,6 @@
   align-items: flex-end;
   gap: 0.5rem;
   font-size: 2rem;
-}
-
-@media (max-width: 767px) {
-  .countdown-digits {
-    gap: 0.25rem;
-  }
 }
 
 .countdown-digits > div {
@@ -130,66 +58,110 @@
   color: #ffffff;
 }
 
-@media (max-width: 767px) {
-  .countdown-digits span {
-    font-size: 1.25rem;
-  }
-}
-
 .countdown-digits small {
   font-size: 0.75rem;
   margin-top: 0.25rem;
-  color: #ffffff;
+  color: #c7a75e;
 }
 
 .countdown-digits div.colon {
   font-size: 3rem;
   line-height: 1.6;
-  color: #ffffff;
+  color: #c7a75e;
   transform: translateY(-0.25rem);
 }
 
-@media (max-width: 767px) {
-  .countdown-digits div.colon {
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (min-width: 768px) {
+  .countdown-bar {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countdown-label {
     font-size: 2rem;
-    transform: translateY(-0.55rem);
+    margin-right: 1rem;
+  }
+
+  .countdown-digits {
+    flex-direction: row;
+  }
+
+  .learn-more-button {
+    width: auto;
+    margin-top: 0;
   }
 }
 
+@media (max-width: 767px) {
+  .countdown-label {
+    font-size: 1.25rem;
+  }
+
+  .countdown-digits span {
+    font-size: 1.25rem;
+  }
+
+  .countdown-digits div.colon {
+    font-size: 2rem;
+  }
+
+  .learn-more-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* ===================== */
+/* BUTTONS */
+/* ===================== */
+
 .learn-more-button {
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #22c55e;
-  color: white;
-  border-radius: 0.25rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #2e8b57;
+  color: #c7a75e;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease;
+  font-weight: 600;
 }
 
 .learn-more-button:hover {
-  background-color: #16a34a;
+  background-color: #3fa372;
 }
 
+/* ===================== */
+/* NAVBAR */
+/* ===================== */
+
 .navbar {
-  background-color: #111;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #13693e;
+  color: #c7a75e;
 }
 
 .navbar-inner {
-  background-color: #f5f5f5;
-  color: #1a1c23;
-  border-bottom: 1px solid #ddd;
-  padding: 0.75rem 1rem;
+  background-color: #12472d;
+  color: #c7a75e;
+  border-bottom: 1px solid #1a3a2b;
+  padding: 0.85rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* ===================== */
+/* LOGO */
+/* ===================== */
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: #c7a75e;
   text-decoration: none;
 }
 
@@ -204,8 +176,12 @@
   width: auto;
 }
 
+/* ===================== */
+/* HAMBURGER */
+/* ===================== */
+
 .hamburger {
-  color: #1a1c23;
+  color: #c7a75e;
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -218,10 +194,14 @@
   }
 }
 
+/* ===================== */
+/* NAV LINKS */
+/* ===================== */
+
 .nav-links {
   display: none;
-  font-size: 1.5rem;
-  gap: 1rem;
+  font-size: 1.1rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -232,59 +212,59 @@
 }
 
 .nav-links a {
-  color: #1a1c23;
+  color: #c7a75e;
   text-decoration: none;
-  margin-left: 1.25rem;
-  transition: color 0.2s;
-  font-weight: bold;
+  transition: color 0.2s ease;
+  font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: #3b82f6;
+  color: #3fa372;
 }
+
+/* ===================== */
+/* MOBILE NAV */
+/* ===================== */
 
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  background-color: #1f2937;
+  gap: 0.75rem;
+  background-color: #13693e;
+  padding: 1rem;
+  border-top: 1px solid #1a3a2b;
 }
 
 .mobile-nav a {
-  color: #e5e7eb;
+  color: #c7a75e;
   text-decoration: none;
 }
 
 .mobile-nav a:hover {
-  color: #60a5fa;
+  color: #3fa372;
 }
 
-.nav-links a.styled-button {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  margin-left: 1.25rem;
-}
+/* ===================== */
+/* STYLED BUTTON (NAV CTA) */
+/* ===================== */
 
-.nav-links a.styled-button:hover {
-  background-color: #1d4ed8;
-  color: black;
-}
-
+.nav-links a.styled-button,
 .mobile-nav a.styled-button {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+  background-color: #2e8b57;
+  color: #ffffff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
+.nav-links a.styled-button:hover,
 .mobile-nav a.styled-button:hover {
-  background-color: #1d4ed8;
-  color: black;
+  background-color: #3fa372;
+  color: #000000;
 }
 
 .styled-button .coming-soon {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   display: block;
+  opacity: 0.8;
 }

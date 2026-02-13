@@ -30,7 +30,6 @@ export default function Home() {
     if (location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
       if (element) {
-
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
@@ -93,32 +92,25 @@ export default function Home() {
             ></iframe>
           </div> */}
           <p>
-            In <strong>Critical Fix</strong>, you're a data center technician
-            racing to fix <strong>7 server tickets</strong> before anyone else.
-          </p>
-          <ul>
-            <li>
-              Use <strong>Part cards</strong> to repair hardware failures
-            </li>
-            <li>
-              <strong>Outsmart opponents</strong> with clever plays
-            </li>
-            <li>
-              <strong>Reopen their Tickets</strong> to stall their progress
-            </li>
-            <li>
-              <strong>Stack new problems</strong> for more points and chaos
-            </li>
-          </ul>
-          <p>
-            Every Ticket goes into <strong>Testing and Resolves</strong> —
-            unless someone reopens it first. The more a Ticket gets reopened,
-            the more it's worth.
+            Critical Fix is a fast-paced, IT-themed card game where 2–6 players
+            compete as Technicians racing to resolve support tickets before
+            their coworkers do. On your turn, you’ll open server Tickets, apply
+            Repair cards to fix broken parts, and send your work into Testing.
+            If your fix survives a full round without interference, the Ticket
+            Resolves and earns you points.
           </p>
           <p>
-            Only the most cunning, ruthless, and lucky technician will survive
-            the chaos and fix 7 Tickets to win the game and make management
-            happy. For now…
+            But in this office, your coworkers are your biggest obstacle.
+            Opponents can sabotage your progress, reopen your Tickets while
+            they’re in Testing, or stack new problems on top — increasing the
+            value of the Ticket but forcing it to be repaired again. The bigger
+            the stack, the bigger the reward… if you can protect it long enough.
+          </p>
+          <p>
+            Do you play it safe with quick fixes, or risk building high-value
+            Ticket stacks while fending off sabotage? The first Technician to
+            Resolve 7 Tickets proves they’re the ultimate problem-solver in
+            Critical Fix.
           </p>
         </div>
       </Section>
@@ -133,36 +125,17 @@ export default function Home() {
           Be part of the community! Join our Discord to meet fellow players and
           share feedback.
         </p>
-        <a
-          href="https://discord.gg/tkVWV5CBzh"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="discord-button"
-        >
-          Join our Discord
-        </a>
 
-        <style>{`
-    .discord-button {
-      display: inline-block;
-      padding: 16px 28px;
-      border-radius: 12px;
-      background: #5865F2;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.15s ease;
-      box-shadow: 0 4px 10px rgba(88,101,242,0.4);
-    }
-    .discord-button:hover {
-      background: #4752c4;
-      transform: translateY(-2px);
-    }
-    .discord-button:active {
-      transform: translateY(0);
-    }
-  `}</style>
+        <p>
+          <a
+            href="https://discord.gg/tkVWV5CBzh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="discord-button"
+          >
+            Join our Discord
+          </a>
+        </p>
 
         {/* <iframe
           src="https://discord.com/widget?id=1383011396127559730&theme=dark"

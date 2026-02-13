@@ -73,10 +73,18 @@ function Navbar() {
           </button>
 
           <nav className="nav-links">
-            <Link to="/" state={{ scrollTo: "news" }}>News</Link>
-            <Link to="/" state={{ scrollTo: "community" }}>Community</Link>
-            <Link to="/" state={{ scrollTo: "about" }}>About Us</Link>
-            <Link to="/" state={{ scrollTo: "contact" }}>Contact</Link>
+            <Link to="/" state={{ scrollTo: "news" }}>
+              News
+            </Link>
+            <Link to="/" state={{ scrollTo: "community" }}>
+              Community
+            </Link>
+            <Link to="/" state={{ scrollTo: "about" }}>
+              About Us
+            </Link>
+            <Link to="/" state={{ scrollTo: "contact" }}>
+              Contact
+            </Link>
             <Link to="/Play">Play!</Link>
             <Link to="#shop" className="styled-button">
               Shop
@@ -88,11 +96,37 @@ function Navbar() {
 
         {menuOpen && (
           <div className="mobile-nav">
-            <Link to="/" state={{ scrollTo: "news" }} onClick={() => setMenuOpen(false)}>News</Link>
-            <Link to="/" state={{ scrollTo: "community" }} onClick={() => setMenuOpen(false)}>Community</Link>
-            <Link to="/" state={{ scrollTo: "about" }} onClick={() => setMenuOpen(false)}>About Us</Link>
-            <Link to="/" state={{ scrollTo: "contact" }} onClick={() => setMenuOpen(false)}>Contact</Link>
-            <Link to="/Play" onClick={() => setMenuOpen(false)}>Play!</Link>
+            <Link
+              to="/"
+              state={{ scrollTo: "news" }}
+              onClick={() => setMenuOpen(false)}
+            >
+              News
+            </Link>
+            <Link
+              to="/"
+              state={{ scrollTo: "community" }}
+              onClick={() => setMenuOpen(false)}
+            >
+              Community
+            </Link>
+            <Link
+              to="/"
+              state={{ scrollTo: "about" }}
+              onClick={() => setMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/"
+              state={{ scrollTo: "contact" }}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <Link to="/Play" onClick={() => setMenuOpen(false)}>
+              Play!
+            </Link>
             <Link
               to="/shop"
               className="styled-button"

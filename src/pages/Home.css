@@ -1,16 +1,26 @@
-/* Home.css */
+/* Home.css - Green PCB Theme */
 
 .home {
-  background-color: #111;
-  color: white;
+  background-color: #0b1f16;
+  color: #c7a75e;
   padding-bottom: 1rem;
+  background-image:
+    linear-gradient(rgba(199, 167, 94, 0.1) 1px, transparent 2px),
+    linear-gradient(90deg, rgba(199, 167, 94, 0.1) 1px, transparent 2px);
+  background-size: 40px 40px;
 }
 
+/* HERO */
+
 .hero {
-  background-image: linear-gradient(to top,
-      rgba(24, 24, 24, 1) 0rem,
-      rgba(0, 0, 0, 0) 4rem),
-    url("/Hero.png");
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(10, 31, 21, 1) 0rem,
+      rgba(10, 31, 21, 0.6) 4rem,
+      rgba(0, 0, 0, 0) 8rem
+    ),
+    url("/Hero_v2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,31 +30,54 @@
 
 @media (min-width: 768px) {
   .hero {
-    padding: 5rem 1.5rem;
+    padding: 6rem 1.5rem;
   }
 }
+
+/* HERO TITLE */
 
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #60a5fa;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1),
-    0 0 3px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1),
-    0 0 6px rgba(0, 0, 0, 1), 0 0 7px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1),
-    0 0 9px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 1),
-    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #c7a75e;
+  text-shadow:
+    0 0 1px rgba(0, 0, 0, 1),
+    0 0 2px rgba(0, 0, 0, 1),
+    0 0 3px rgba(0, 0, 0, 1),
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 5px rgba(0, 0, 0, 1),
+    0 0 6px rgba(0, 0, 0, 1),
+    0 0 7px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 1),
+    0 0 9px rgba(0, 0, 0, 1),
+    0 0 10px rgba(0, 0, 0, 1),
+    0 0 15px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-.hero-subtitle {
-  font-size: 1rem;
+/* HERO SUBTITLE */
+
+.hero-subtitle,
+.hero-main-list-text {
+  font-size: 1.1rem;
   max-width: 40rem;
   margin: 0 auto 1.5rem;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1),
-    0 0 3px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1),
-    0 0 6px rgba(0, 0, 0, 1), 0 0 7px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1),
-    0 0 9px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 1),
-    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #c7a75e;
+  text-shadow:
+    0 0 1px rgba(0, 0, 0, 1),
+    0 0 2px rgba(0, 0, 0, 1),
+    0 0 3px rgba(0, 0, 0, 1),
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 5px rgba(0, 0, 0, 1),
+    0 0 6px rgba(0, 0, 0, 1),
+    0 0 7px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 1),
+    0 0 9px rgba(0, 0, 0, 1),
+    0 0 10px rgba(0, 0, 0, 1),
+    0 0 15px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.4);
+  font-weight: bolder;
 }
 
 @media (min-width: 768px) {
@@ -53,32 +86,107 @@
   }
 }
 
-.hero-main-list-text {
-  font-size: 1.25rem;
-  max-width: 40rem;
-  margin: 1rem auto 0.5rem;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1),
-    0 0 3px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1),
-    0 0 6px rgba(0, 0, 0, 1), 0 0 7px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1),
-    0 0 9px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 1),
-    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
-}
+/* BUTTONS */
 
-.cta-button {
+.cta-button,
+.styled-button,
+.discord-button {
   display: inline-block;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #2e8b57;
+  color: #e8fff4;
   font-weight: bold;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
+.cta-button:hover,
+.styled-button:hover,
+.discord-button:hover {
+  background-color: #3fa372;
+  color: #000000;
+}
+
+.styled-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* SECTIONS */
+
+.section {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #c7a75e;
+  letter-spacing: 1px;
+}
+
+/* CARD GRID */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-image {
+  border-radius: 0.5rem;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(0, 255, 136, 0.3);
+  width: 100%;
+  height: auto;
+}
+
+/* TEXT SECTIONS */
+
+.section-text {
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #c7a75e;
+}
+
+.section-text ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 1rem auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.section-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* HOW TO PLAY */
+
+.how-to-play {
+  list-style-type: decimal;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: left;
+  color: #c8ffe0;
+}
+
+.how-to-play li {
+  margin-bottom: 1rem;
+}
+
+/* VIDEO */
 
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
   padding-top: 1rem;
   height: 0;
   overflow: hidden;
@@ -94,116 +202,45 @@
   height: 100%;
 }
 
-.section-text ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 1rem auto;
-  text-align: left;
-  display: inline-block;
-}
+/* MAILING LIST */
 
-.section-text li {
-  margin-bottom: 0.5rem;
-}
-
-.cta-button:hover {
-  background-color: #2563eb;
-}
-
-.section {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.5rem;
-}
-
-.card-image {
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.mailing-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
   width: 100%;
-  height: auto;
-}
-
-.how-to-play {
-  list-style-type: decimal;
-  max-width: 40rem;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.how-to-play li {
-  margin-bottom: 1rem;
-}
-
-.section-text {
-  max-width: 50rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.preorder-image {
-  display: block;
-  max-width: 15rem;
-  margin: 0 auto 1.5rem;
-}
-
-.styled-button {
-  display: inline-block;
-  background-color: #3b82f6;
-  color: white;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-.styled-button:hover {
-  background-color: #2563eb;
-  color: black;
-}
-
-.styled-button:disabled {
-  cursor: not-allowed;
 }
 
 .mailing-list-form {
   display: flex;
-  align-items: center;
   gap: 0.75rem;
-  justify-content: center;
+  align-items: center;
+  width: fit-content; /* important */
 }
 
+@media (max-width: 600px) {
+  .mailing-list-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 .mailing-input {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #2e8b57;
+  background-color: #102a1f;
+  color: #d7f5e6;
   border-radius: 0.25rem;
-  width: 100%;
-  max-width: 320px;
-  box-sizing: border-box;
-  color: #ffffff;
-  background-color: #111111;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
-/* Needed so navbar scrolling will show the section title - (It doesn't take the navbar into consideration when scrolling) */
+.mailing-input:focus-visible {
+  border-color: #c7a75e;
+  box-shadow: 0 0 10px #c7a75e;
+  color: #c7a75e;
+  outline: none;
+}
+
+/* SCROLL FIX */
+
 html {
   scroll-padding-top: 200px;
   scroll-behavior: smooth;

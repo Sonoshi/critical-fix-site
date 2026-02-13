@@ -41,7 +41,7 @@ export default function MailingListForm({
   }
 
   return (
-    <div>
+    <div className="mailing-wrapper">
       <form onSubmit={handleSubmit} className="mailing-list-form">
         <input
           required

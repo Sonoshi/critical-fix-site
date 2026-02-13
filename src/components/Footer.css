@@ -1,10 +1,12 @@
+/* Footer - Industrial PCB Theme */
+
 .footer {
-  background-color: #313131;
-  color: white;
-  padding: 0.25rem 1rem;
+  background-color: #12472d; /* Base board green */
+  color: #c7a75e;
   text-align: center;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid rgba(199, 167, 94, 0.5); /* subtle separation */
 }
 
 .footer-inner {
@@ -13,28 +15,51 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 0.25rem;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 768px) {
   .footer-inner {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
-.footer-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 0.25rem;
-}
-
 .footer-section {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   flex: 1;
 }
 
+/* Section Titles */
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #c7a75e;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Footer Links */
+
+.footer-section a {
+  color: #3fa372;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #9fd8bf;
+}
+
+/* Bottom Copyright */
+
 .footer-bottom {
   font-size: 0.875rem;
-  color: #ffffff;
+  color: #c7a75e;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(199, 167, 94, 0.5);
+  margin-left: 5%;
+  margin-right: 5%;
 }
