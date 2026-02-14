@@ -17,15 +17,21 @@
     linear-gradient(
       to top,
       rgba(10, 31, 21, 1) 0rem,
-      rgba(10, 31, 21, 0.6) 2rem,
-      rgba(0, 0, 0, 0) 4rem
+      rgba(10, 31, 21, 0.6) 4rem,
+      rgba(0, 0, 0, 0) 8rem
     ),
-    url("/hero.png");
+    url("/Hero_v2.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   text-align: center;
   padding: 1rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 10rem 1.5rem;
+  }
 }
 
 .hero-background {
