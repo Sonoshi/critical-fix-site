@@ -26,48 +26,49 @@ function Navbar() {
 
   return (
     <header className="navbar-header">
-      {/* <div className="countdown-bar">
-        <div className="countdown-text">
-          <div className="countdown-label">Kickstarter coming soon:</div>
-          <div className="countdown-digits">
-            <div>
-              <span>{timeLeft.days.toString().padStart(2, "0")}</span>
-              <small>days</small>
-            </div>
-            <div className="colon">:</div>
-            <div>
-              <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
-              <small>hours</small>
-            </div>
-            <div className="colon">:</div>
-            <div>
-              <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
-              <small>minutes</small>
-            </div>
-            <div className="colon">:</div>
-            <div>
-              <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
-              <small>seconds</small>
-            </div>
-          </div>
-        </div>
-
-        <a
-          href="https://www.kickstarter.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="learn-more-button"
-        >
-          Learn More
-        </a>
-      </div> */}
+      {
+        // <div className="countdown-bar">
+        //   <div className="countdown-text">
+        //     <div className="countdown-label">Kickstarter coming soon:</div>
+        //     <div className="countdown-digits">
+        //       <div>
+        //         <span>{timeLeft.days.toString().padStart(2, "0")}</span>
+        //         <small>days</small>
+        //       </div>
+        //       <div className="colon">:</div>
+        //       <div>
+        //         <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
+        //         <small>hours</small>
+        //       </div>
+        //       <div className="colon">:</div>
+        //       <div>
+        //         <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
+        //         <small>minutes</small>
+        //       </div>
+        //       <div className="colon">:</div>
+        //       <div>
+        //         <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
+        //         <small>seconds</small>
+        //       </div>
+        //     </div>
+        //   </div>
+        //   <a
+        //     href="https://www.kickstarter.com/"
+        //     target="_blank"
+        //     rel="noopener noreferrer"
+        //     className="learn-more-button"
+        //   >
+        //     Learn More
+        //   </a>
+        // </div>
+      }
 
       <div className="navbar">
         <div className="navbar-inner">
           <Link to="/" className="logo-link">
             <img src={logo} alt="Critical Fix Logo" className="logo-image" />
           </Link>
-
+          <div className="countdown-label">Kickstarter coming Fall 2026</div>
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? "✖" : "☰"}
           </button>

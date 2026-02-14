@@ -41,19 +41,21 @@ export default function Home() {
     <main className="home">
       {/* Hero */}
       <section className="hero">
-        <h1 className="hero-title">Critical Fix</h1>
-        <p className="hero-subtitle">
-          <strong>Critical Fix</strong> A fast-paced, IT-themed card game where
-          you and your coworkers race to fix seven broken servers before anyone
-          else. Sabotage rivals, hoard parts, and survive a day’s worth of tech
-          nightmares in one chaotic deck.
-        </p>
+        <div className="hero-background">
+          <h1 className="hero-title">Critical Fix</h1>
+          <p className="hero-subtitle">
+            <strong>Critical Fix</strong> is a fast-paced, IT-themed card game
+            where you and your coworkers race to fix seven broken servers before
+            anyone else. Sabotage rivals, hoard parts, and survive a day’s worth
+            of tech nightmares in one chaotic deck.
+          </p>
 
-        {/* Email Sign-up */}
-        <p className="hero-main-list-text">
-          Interested in getting updates? Join our mailing list!
-        </p>
-        <MailingListForm />
+          {/* Email Sign-up */}
+          <p className="hero-main-list-text">
+            Interested in getting updates? Join our mailing list!
+          </p>
+          <MailingListForm />
+        </div>
       </section>
       {/* What is Critical Fix? */}
       <Section id="whatDis" title="What is Critical Fix?">

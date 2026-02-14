@@ -14,8 +14,11 @@ export default function Footer() {
             culture. What started as a breakroom joke quickly grew into a fully
             playable card game that captures the absurd reality of solving
             tickets, scrambling for parts, and dealing with a bit of friendly
-            competition. Now, instead of being stuck in a server room, you can
-            experience it all from the comfort of your kitchen table.
+            competition.
+          </p>
+          <p>
+            Now, instead of being stuck in a server room, you can experience it
+            all from the comfort of your kitchen table.
           </p>
         </div>
 
