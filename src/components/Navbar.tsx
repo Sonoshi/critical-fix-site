@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_v2.png";
 
 // function getTimeRemaining(targetDate: Date) {
 //   const total = targetDate.getTime() - new Date().getTime();
