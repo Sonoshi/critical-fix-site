@@ -109,9 +109,9 @@ export default function Home() {
 
       <CFShowcase
         images={[
-          "./public/assets/images/cards/card1.PNG",
-          "./public/assets/images/cards/card2.PNG",
-          "./public/assets/images/cards/card3.PNG",
+          "./assets/images/cards/card1.PNG",
+          "./assets/images/cards/card2.PNG",
+          "./assets/images/cards/card3.PNG",
         ]}
         title="Repair the Chaos"
         description={
@@ -125,9 +125,9 @@ export default function Home() {
       ></CFShowcase>
       <CFShowcase
         images={[
-          "./public/assets/images/cards/card4.jpg",
-          "./public/assets/images/cards/card5.jpg",
-          "./public/assets/images/cards/card6.jpg",
+          "./assets/images/cards/card4.jpg",
+          "./assets/images/cards/card5.jpg",
+          "./assets/images/cards/card6.jpg",
         ]}
         title="Sabotage Your Rivals"
         description={
@@ -141,9 +141,9 @@ export default function Home() {
       ></CFShowcase>
       <CFShowcase
         images={[
-          "./public/assets/images/cards/card7.jpg",
-          "./public/assets/images/cards/card8.PNG",
-          "./public/assets/images/cards/card9.PNG",
+          "./assets/images/cards/card7.jpg",
+          "./assets/images/cards/card8.PNG",
+          "./assets/images/cards/card9.PNG",
         ]}
         title="Rule the Data Center"
         description={
