@@ -57,7 +57,7 @@ export default function MailingListForm({
           className="styled-button"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Submitting..." : "Submit"}
+          {status === "loading" ? "Submitting..." : "Notify Me"}
         </button>
       </form>
       {message && <div className={`form-status ${status}`}>{message}</div>}

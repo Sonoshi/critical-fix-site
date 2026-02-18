@@ -1,0 +1,55 @@
+/* CFHeader.css - Industrial PCB Theme */
+
+.cf-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #12472d;
+  border-bottom: 1px solid rgba(199, 167, 94, 0.5);
+}
+
+/* ===================== */
+/* INNER CONTAINER */
+/* ===================== */
+
+.cf-header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===================== */
+/* LOGO */
+/* ===================== */
+
+.cf-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 2; /* keeps it above centered text */
+}
+
+.cf-logo-image {
+  height: 5rem;
+  width: auto;
+  display: block;
+}
+
+/* ===================== */
+/* CENTER ANNOUNCEMENT */
+/* ===================== */
+
+.cf-announcement {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: rgba(199, 167, 94, 1);
+  text-align: center;
+  white-space: nowrap;
+}

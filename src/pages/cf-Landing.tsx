@@ -1,8 +1,29 @@
 import "./Home.css";
-import NewsSection from "../components/NewsSection";
 import MailingListForm from "../components/MailingListForm";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import CFShowcase from "../components/CFShowcase";
+import CFStaticFeature from "../components/CFStaticFeature";
+import CFImageRow from "../components/CFImageRow";
+
+import card1 from "../assets/cards/card1.png";
+import card2 from "../assets/cards/card2.png";
+import card3 from "../assets/cards/card3.png";
+import card4 from "../assets/cards/card4.jpg";
+import card5 from "../assets/cards/card5.jpg";
+import card6 from "../assets/cards/card6.jpg";
+import card7 from "../assets/cards/card7.jpg";
+import card8 from "../assets/cards/card8.png";
+import card9 from "../assets/cards/card9.png";
+
+import whatsInTheBox from "../assets/images/whatsinthebox.png";
+
+import playTest from "../assets/images/playtest.png";
+import brokeMotherboard from "../assets/images/broke_motherboard.png";
+import sketches from "../assets/images/sketches.png";
+import tokens from "../assets/images/tokens.png";
+
+import comingSoon from "../assets/images/coming_soon.png";
 
 function Section({
   id,
@@ -18,7 +39,7 @@ function Section({
       <h2 id={id} className="section-title">
         {title}
       </h2>
-      {children}
+      <div className="section-text">{children}</div>
     </section>
   );
 }
@@ -42,47 +63,50 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-background">
-          <h1 className="hero-title">Critical Fix</h1>
+          <h1 className="hero-title">
+            The only card game where a "Manager 1 on 1" is a weapon and a
+            stripped screw is an act of war.
+          </h1>
           <p className="hero-subtitle">
-            <strong>Critical Fix</strong> is a fast-paced, IT-themed card game
-            where you and your coworkers race to fix seven broken servers before
-            anyone else. Sabotage rivals, hoard parts, and survive a day’s worth
-            of tech nightmares in one chaotic deck.
+            Finally, a game that lets you show your friends and family why you
+            drink... without explaining what a server actually is.
           </p>
 
           {/* Email Sign-up */}
           <p className="hero-main-list-text">
-            Interested in getting updates? Join our mailing list!
+            Coming to kickstart soon. Sign up to get notified when we launch.
           </p>
           <MailingListForm />
         </div>
       </section>
-      {/* What is Critical Fix? */}
-      <Section id="whatDis" title="What is Critical Fix?">
-        <div className="section-text">
-          <div
-            className="video-placeholder"
-            title="Coming Soon"
+      {/* YouTube Placeholder */}
+      <Section title="">
+        <div
+          className="video-placeholder"
+          title="Coming Soon"
+          style={{
+            position: "relative",
+            width: "100%",
+            maxWidth: "560px",
+            margin: "0 auto 2rem",
+            cursor: "not-allowed",
+            boxShadow: "0 0px 25px rgba(199, 167, 94, 0.3)",
+            border: "2px solid rgba(199, 167, 94, 0.5)",
+            borderRadius: "0.5rem",
+          }}
+        >
+          <img
+            src={comingSoon}
+            alt="Critical Fix video coming soon"
             style={{
-              position: "relative",
               width: "100%",
-              maxWidth: "560px",
-              margin: "0 auto 2rem",
-              cursor: "not-allowed",
+              borderRadius: "8px",
+              opacity: 0.8,
             }}
-          >
-            <img
-              src="/assets/images/video_coming_soon.png"
-              alt="Critical Fix video coming soon"
-              style={{
-                width: "100%",
-                borderRadius: "8px",
-                opacity: 0.8,
-              }}
-            />
-          </div>
-          {/* YouTube Embed */}
-          {/* <div className="video-container">
+          />
+        </div>
+        {/* YouTube Embed */}
+        {/* <div className="video-container">
             <iframe
               width="560"
               height="315"
@@ -93,75 +117,74 @@ export default function Home() {
               allowFullScreen
             ></iframe>
           </div> */}
-          <p>
-            <strong>Critical Fix</strong> is a fast-paced, IT-themed card game
-            where 2–6 players compete as Technicians racing to resolve support
-            tickets before their coworkers do. On your turn, you’ll open server
-            Tickets, apply Repair cards to fix broken parts, and send your work
-            into Testing. If your fix survives a full round without
-            interference, the Ticket Resolves and earns you points.
-          </p>
-          <p>
-            But in this office, your coworkers are your biggest obstacle.
-            Opponents can sabotage your progress, reopen your Tickets while
-            they’re in Testing, or stack new problems on top — increasing the
-            value of the Ticket but forcing it to be repaired again. The bigger
-            the stack, the bigger the reward… if you can protect it long enough.
-          </p>
-          <p>
-            Do you play it safe with quick fixes, or risk building high-value
-            Ticket stacks while fending off sabotage? The first Technician to
-            Resolve 7 Tickets proves they’re the ultimate problem-solver in
-            Critical Fix.
-          </p>
-        </div>
       </Section>
-      {/* News */}
-      <Section id="news" title="News & Updates">
-        <NewsSection />
-      </Section>
-
-      {/* Community */}
-      <Section id="community" title="Community">
-        <p className="section-text">
-          Be part of the community! Join our Discord to meet fellow players and
-          share feedback.
-        </p>
-
+      <Section title="What is Critical Fix?">
         <p>
-          <a
-            href="https://discord.gg/tkVWV5CBzh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="discord-button"
-          >
-            Join our Discord
-          </a>
+          Critical Fix is an action packed 2-6 player IT themed card game. Turns
+          are fast and games last less than 1 hour. Hundreds of cards for
+          unlimited combinations!
         </p>
-
-        {/* <iframe
-          src="https://discord.com/widget?id=1383011396127559730&theme=dark"
-          width="350"
-          height="500"
-          // allowTransparency={true}
-          frameBorder="0"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe> */}
       </Section>
 
-      {/* Featured Cards
-      <Section title="Featured Cards">
-        <div className="card-grid">
-          {featuredCards.map((i) => (
-            <img
-              key={i}
-              src={`/cards/card${i}.PNG`}
-              alt={`Card ${i}`}
-              className="card-image"
-            />
-          ))}
-        </div>
-      </Section> */}
+      <CFShowcase
+        images={[card1, card2, card3]}
+        title="Repair the Chaos"
+        description={
+          <>
+            You're a tech under pressure.
+            <br />
+            Use part cards to repair tickets like fried CPUs, loose cables, and
+            burnt GPUs.
+          </>
+        }
+      ></CFShowcase>
+      <CFShowcase
+        images={[card4, card5, card6]}
+        title="Sabotage Your Rivals"
+        description={
+          <>
+            Send fixed tickets into testing, but your coworkers can sabotage
+            your progress, reopen tickets, or steal your work. Just like real
+            life!
+          </>
+        }
+        reverse
+      ></CFShowcase>
+      <CFShowcase
+        images={[card7, card8, card9]}
+        title="Rule the Data Center"
+        description={
+          <>
+            Battle it out with 2-6 people to see who will rule the data center.
+            Only the most cunning, ruthless, and luckiest technician will
+            survive the chaos and fix 7 tickets to win the game and make
+            management happy.
+            <br />
+            For now...
+          </>
+        }
+      ></CFShowcase>
+
+      <CFStaticFeature
+        image={whatsInTheBox}
+        title="Whats in the box?!?!"
+        description={`Critical Fix comes with:\n~200 Cards\n6 Server Types\n8 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
+      />
+      <CFImageRow
+        items={[
+          { image: playTest, description: "Playtest." },
+          { image: brokeMotherboard, description: "Sabotage your coworkers." },
+          {
+            image: sketches,
+            description: "Some exclusive sketches of Critical Fix being made.",
+          },
+          {
+            image: tokens,
+            description:
+              "3D printed tokens. Look for this add-on on the Kickstarter!",
+          },
+        ]}
+      />
     </main>
   );
 }

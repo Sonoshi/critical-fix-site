@@ -8,7 +8,7 @@ export default function Footer() {
         {/* About Us */}
         <div className="footer-section" id="about">
           <h2 className="footer-title">About Us</h2>
-          <p className="section-text">
+          <p className="footer-text">
             We're 3 data center techs who turned our daily chaos into a card
             game. <strong>Critical Fix</strong> is our love letter to tech
             culture. What started as a breakroom joke quickly grew into a fully
@@ -24,14 +24,28 @@ export default function Footer() {
 
         <div className="footer-section">
           {/* Mailing List */}
-          <div>
-            <h2 className="footer-title">Join Our Mailing List</h2>
-            <MailingListForm />
+          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div>
+              <h2 className="footer-title">
+                Don't get lost in the backlog. Join to get notified!
+              </h2>
+              <MailingListForm />
+            </div>
+            {/* Discord */}
+            <p style={{ alignSelf: "end", margin: 0 }}>
+              <a
+                href="https://discord.gg/tkVWV5CBzh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="discord-button"
+              >
+                Join our Discord
+              </a>
+            </p>
           </div>
-          {/* Contact Us */}
           <div id="contact">
             <h2 className="footer-title">Contact Us</h2>
-            <p className="section-text">
+            <p className="footer-text">
               Want to collaborate, review the game, or ask questions?
               <br />
               Email us at:{" "}
@@ -40,7 +54,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       <div className="footer-bottom">
         <p>
           &copy; {new Date().getFullYear()} Critical Fix. All rights reserved.

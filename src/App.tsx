@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import CFHeader from "./components/CFHeader";
 import Home from "./pages/cf-Landing"; // matches your `export default function Home()`
 import "./App.css";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app-container">
       <Router>
-        <Navbar />
+        <CFHeader />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/play" element={<PlayPage />} />

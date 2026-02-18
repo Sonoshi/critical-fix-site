@@ -40,16 +40,23 @@
   letter-spacing: 0.5px;
 }
 
+.footer-text {
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #c7a75e;
+}
+
 /* Footer Links */
 
 .footer-section a {
-  color: #3fa372;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-section a:hover {
-  color: #9fd8bf;
+  color: #000000;
 }
 
 /* Bottom Copyright */

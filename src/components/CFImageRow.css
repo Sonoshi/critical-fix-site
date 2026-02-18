@@ -1,0 +1,33 @@
+.cfRow {
+  display: flex;
+  gap: 1rem;
+  max-width: 90%;
+  margin: auto;
+}
+
+.cfCard {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  transition: transform 0.2s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cfCard:hover {
+  transform: translateY(-6px);
+}
+
+.cfCard img {
+  width: 100%;
+  aspect-ratio: 2584 / 1846;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0px 20px rgba(199, 167, 94, 0.3);
+  border: 2px solid rgba(199, 167, 94, 0.5);
+}
+
+.cfCard p {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}

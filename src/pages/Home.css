@@ -44,7 +44,7 @@
 /* HERO TITLE */
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 0rem;
   color: #c7a75e;
@@ -160,7 +160,9 @@
   max-width: 50rem;
   margin: 0 auto;
   text-align: center;
-  color: #c7a75e;
+  font-size: 1.25rem;
+  color: rgba(199, 167, 94, 1);
+  line-height: 1.6;
 }
 
 .section-text ul {
