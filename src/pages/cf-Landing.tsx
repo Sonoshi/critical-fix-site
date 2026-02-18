@@ -6,25 +6,6 @@ import CFShowcase from "../components/CFShowcase";
 import CFStaticFeature from "../components/CFStaticFeature";
 import CFImageRow from "../components/CFImageRow";
 
-import card1 from "../assets/cards/card1.png";
-import card2 from "../assets/cards/card2.png";
-import card3 from "../assets/cards/card3.png";
-import card4 from "../assets/cards/card4.jpg";
-import card5 from "../assets/cards/card5.jpg";
-import card6 from "../assets/cards/card6.jpg";
-import card7 from "../assets/cards/card7.jpg";
-import card8 from "../assets/cards/card8.png";
-import card9 from "../assets/cards/card9.png";
-
-import whatsInTheBox from "../assets/images/whatsinthebox.png";
-
-import playTest from "../assets/images/playtest.png";
-import brokeMotherboard from "../assets/images/broke_motherboard.png";
-import sketches from "../assets/images/sketches.png";
-import tokens from "../assets/images/tokens.png";
-
-import comingSoon from "../assets/images/coming_soon.png";
-
 function Section({
   id,
   title,
@@ -96,7 +77,7 @@ export default function Home() {
           }}
         >
           <img
-            src={comingSoon}
+            src={"./assets/images/video_coming_soon.png"}
             alt="Critical Fix video coming soon"
             style={{
               width: "100%",
@@ -127,7 +108,11 @@ export default function Home() {
       </Section>
 
       <CFShowcase
-        images={[card1, card2, card3]}
+        images={[
+          "./public/assets/images/cards/card1.PNG",
+          "./public/assets/images/cards/card2.PNG",
+          "./public/assets/images/cards/card3.PNG",
+        ]}
         title="Repair the Chaos"
         description={
           <>
@@ -139,7 +124,11 @@ export default function Home() {
         }
       ></CFShowcase>
       <CFShowcase
-        images={[card4, card5, card6]}
+        images={[
+          "./public/assets/images/cards/card4.jpg",
+          "./public/assets/images/cards/card5.jpg",
+          "./public/assets/images/cards/card6.jpg",
+        ]}
         title="Sabotage Your Rivals"
         description={
           <>
@@ -151,7 +140,11 @@ export default function Home() {
         reverse
       ></CFShowcase>
       <CFShowcase
-        images={[card7, card8, card9]}
+        images={[
+          "./public/assets/images/cards/card7.jpg",
+          "./public/assets/images/cards/card8.PNG",
+          "./public/assets/images/cards/card9.PNG",
+        ]}
         title="Rule the Data Center"
         description={
           <>
@@ -166,20 +159,26 @@ export default function Home() {
       ></CFShowcase>
 
       <CFStaticFeature
-        image={whatsInTheBox}
+        image={"./assets/images/whatsinthebox.png"}
         title="Whats in the box?!?!"
         description={`Critical Fix comes with:\n~200 Cards\n6 Server Types\n8 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
       />
       <CFImageRow
         items={[
-          { image: playTest, description: "Playtest." },
-          { image: brokeMotherboard, description: "Sabotage your coworkers." },
           {
-            image: sketches,
+            image: "./assets/images/playtest.png",
+            description: "Playtest.",
+          },
+          {
+            image: "./assets/images/broke_motherboard.png",
+            description: "Sabotage your coworkers.",
+          },
+          {
+            image: "./assets/images/sketches.png",
             description: "Some exclusive sketches of Critical Fix being made.",
           },
           {
-            image: tokens,
+            image: "./assets/images/tokens.png",
             description:
               "3D printed tokens. Look for this add-on on the Kickstarter!",
           },
