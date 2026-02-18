@@ -77,7 +77,7 @@ export default function Home() {
           }}
         >
           <img
-            src={"./assets/images/video_coming_soon.png"}
+            src={"./assets/images/coming_soon.png"}
             alt="Critical Fix video coming soon"
             style={{
               width: "100%",
