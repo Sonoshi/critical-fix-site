@@ -55,7 +55,7 @@ export default function Home() {
 
           {/* Email Sign-up */}
           <p className="hero-main-list-text">
-            Coming to kickstart soon. Sign up to get notified when we launch.
+            Coming to Kickstarter soon. Sign up to get notified when we launch.
           </p>
           <MailingListForm />
         </div>
