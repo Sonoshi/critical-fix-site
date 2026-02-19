@@ -33,7 +33,7 @@
 }
 
 .cf-logo-image {
-  height: 5rem;
+  height: clamp(3rem, 6vw, 5rem);
   width: auto;
   display: block;
 }
@@ -47,9 +47,16 @@
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: clamp(1rem, 3.5vw, 2rem);
   letter-spacing: 0.5px;
   color: rgba(199, 167, 94, 1);
   text-align: center;
   white-space: nowrap;
+  max-width: 70%;
+}
+
+@media (max-width: 900px) {
+  .cf-announcement {
+    transform: translateX(-30%);
+  }
 }

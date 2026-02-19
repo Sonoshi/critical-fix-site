@@ -31,3 +31,32 @@
   margin-top: 0.5rem;
   opacity: 0.8;
 }
+
+@media (max-width: 1024px) {
+  .cfRow {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .cfCard {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .cfRow {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .cfCard {
+    flex: none;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .cfCard:hover {
+    transform: none; /* remove hover lift on mobile */
+  }
+}
