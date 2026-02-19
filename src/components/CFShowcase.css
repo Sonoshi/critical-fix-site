@@ -104,6 +104,23 @@
 /* RESPONSIVE */
 /* ===================== */
 
+/* Tablet */
+@media (max-width: 1100px) {
+  .cf-showcase {
+    gap: 2.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .cf-carousel {
+    max-width: 450px;
+  }
+
+  .cf-showcase-text {
+    max-width: 450px;
+  }
+}
+
+/* Small Tablet */
 @media (max-width: 900px) {
   .cf-showcase {
     flex-direction: column;
@@ -121,6 +138,29 @@
 
   .cf-showcase-text {
     max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cf-showcase {
+    padding: 1rem 0.75rem;
+    gap: 1.75rem;
+  }
+
+  .cf-carousel {
+    max-width: 100%;
+  }
+
+  .cf-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .cf-autoplay-toggle {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
   }
 }
 
