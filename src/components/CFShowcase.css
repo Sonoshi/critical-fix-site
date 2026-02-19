@@ -73,11 +73,11 @@
 }
 
 .cf-arrow.left {
-  left: 10px;
+  left: 0.5rem;
 }
 
 .cf-arrow.right {
-  right: 10px;
+  right: 0.5rem;
 }
 
 /* ===================== */
