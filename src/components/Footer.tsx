@@ -43,7 +43,7 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div id="contact">
+          <div id="contact" style={{ marginTop: "1.5rem" }}>
             <h2 className="footer-title">Contact Us</h2>
             <p className="footer-text">
               Want to collaborate, review the game, or ask questions?

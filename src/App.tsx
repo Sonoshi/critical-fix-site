@@ -4,6 +4,7 @@ import Home from "./pages/cf-Landing"; // matches your `export default function 
 import "./App.css";
 import Footer from "./components/Footer";
 import PlayPage from "./pages/playPage";
+import CardCreator from "./pages/CardGeneratorPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/play" element={<PlayPage />} />
+          <Route path="/create" element={<CardCreator />} />
         </Routes>
         <Footer />
       </Router>

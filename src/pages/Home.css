@@ -44,6 +44,7 @@
 /* HERO TITLE */
 
 .hero-title {
+  font-family: var(--font-title);
   font-size: clamp(1.4rem, 5vw, 2rem);
   line-height: 1.2;
   font-weight: bold;
