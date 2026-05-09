@@ -237,7 +237,7 @@ const CardPreview = forwardRef<HTMLDivElement, CardPreviewProps>(
             pointerEvents: "none",
           }}
         >
-          www.critical-fix.com/create
+          www.critical-fix.com/create-a-card
         </div>
       </div>
     );
