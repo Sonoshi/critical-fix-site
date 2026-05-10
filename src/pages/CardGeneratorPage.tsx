@@ -117,7 +117,7 @@ export default function CardCreator() {
             setFlavor={setFlavor}
           />
 
-          <ExportButtons cardRef={cardRef} />
+          <ExportButtons cardRef={cardRef} title={title} />
         </div>
 
         <div className="generatorPreview">

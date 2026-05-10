@@ -156,11 +156,11 @@ const CardPreview = forwardRef<HTMLDivElement, CardPreviewProps>(
           style={{
             position: "absolute",
             top: "538px",
-            left: "50px",
-            right: "50px",
+            left: "35px",
+            right: "35px",
             fontFamily: "'ActionMan', Arial, sans-serif",
-            fontSize: "14px",
-            lineHeight: "1.4",
+            fontSize: "16px",
+            lineHeight: "1.2",
             color: "#000",
             pointerEvents: "none",
           }}
@@ -174,8 +174,8 @@ const CardPreview = forwardRef<HTMLDivElement, CardPreviewProps>(
             style={{
               position: "absolute",
               bottom: "20px",
-              left: "50px",
-              right: "50px",
+              left: "40px",
+              right: "40px",
               textAlign: "center",
               fontFamily: "'ActionMan', Arial, sans-serif",
               fontSize: "12px",

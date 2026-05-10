@@ -29,20 +29,20 @@ export default function CardForm({
       <textarea
         className="formTextarea"
         placeholder="Description"
-        maxLength={150}
+        maxLength={160}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <div className="charCount">{description.length}/150</div>
+      <div className="charCount">{description.length}/160</div>
 
       <input
         className="formInput"
         placeholder="Flavor Text"
-        maxLength={75}
+        maxLength={50}
         value={flavor}
         onChange={(e) => setFlavor(e.target.value)}
       />
-      <div className="charCount">{flavor.length}/75</div>
+      <div className="charCount">{flavor.length}/50</div>
     </div>
   );
 }

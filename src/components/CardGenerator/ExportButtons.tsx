@@ -4,6 +4,7 @@ import { Download, Share2 } from "lucide-react";
 
 interface ExportButtonsProps {
   cardRef: RefObject<HTMLDivElement | null>;
+  title?: string;
 }
 
 const FacebookIcon = () => (
@@ -29,7 +30,7 @@ const InstagramIcon = () => (
   </svg>
 );
 
-export default function ExportButtons({ cardRef }: ExportButtonsProps) {
+export default function ExportButtons({ cardRef, title }: ExportButtonsProps) {
   const generateImage = async () => {
     if (!cardRef.current) return null;
 
@@ -49,7 +50,8 @@ export default function ExportButtons({ cardRef }: ExportButtonsProps) {
     if (!dataUrl) return;
 
     const link = document.createElement("a");
-    link.download = "critical-fix-card.png";
+    const slug = title?.trim().replace(/\s+/g, "-") || "critical-fix-card";
+    link.download = `${slug}.png`;
     link.href = dataUrl;
     link.click();
   };
