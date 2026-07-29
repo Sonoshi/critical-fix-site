@@ -55,25 +55,47 @@ export default function CardCreator() {
           </a>
 
           <a
-            href="https://www.facebook.com/profile.php?id=61577106580801"
+            href="https://www.facebook.com/profile.php?id=61574506475951"
             target="_blank"
             rel="noreferrer"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style={{ flexShrink: 0 }}
+            >
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
             Facebook
           </a>
 
           <a
-            href="https://www.instagram.com/criticalfixgame/"
+            href="https://www.instagram.com/critical_fix_card_game/"
             target="_blank"
             rel="noreferrer"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ flexShrink: 0 }}
+            >
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
             </svg>
             Instagram
           </a>
