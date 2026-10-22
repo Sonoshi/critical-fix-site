@@ -90,6 +90,15 @@
   font-weight: bolder;
 }
 
+.hero-main-list-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.hero-main-list-text a:hover {
+  color: #fff;
+}
+
 /* BUTTONS */
 
 .cta-button,

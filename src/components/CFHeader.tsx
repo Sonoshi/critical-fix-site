@@ -12,7 +12,14 @@ function CFHeader() {
         </Link>
 
         {/* Centered Announcement */}
-        <div className="cf-announcement">Kickstarter coming Fall 2026</div>
+        <a
+          href="https://www.kickstarter.com/projects/criticalfix/critical-fix"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cf-announcement"
+        >
+          Kickstarter launches October 27th
+        </a>
       </div>
     </header>
   );

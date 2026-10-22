@@ -55,49 +55,50 @@ export default function Home() {
 
           {/* Email Sign-up */}
           <p className="hero-main-list-text">
-            Coming to Kickstarter soon. Sign up to get notified when we launch.
+            Our Kickstarter launches October 27th!{" "}
+            <a
+              href="https://www.kickstarter.com/projects/criticalfix/critical-fix"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check it out
+            </a>
+            , or sign up below to get notified when we launch.
+          </p>
+          <p className="hero-main-list-text">
+            Want a free 10-card Holofoil pack? Reserve your copy now for just
+            $1 before the Kickstarter launches:{" "}
+            <a
+              href="https://vip.critical-fix.com/pages/reservation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              reserve yours here
+            </a>
+            .
           </p>
           <MailingListForm />
         </div>
       </section>
-      {/* YouTube Placeholder */}
+      {/* YouTube Embed */}
       <Section title="">
         <div
-          className="video-placeholder"
-          title="Coming Soon"
+          className="video-container"
           style={{
-            position: "relative",
-            width: "100%",
             maxWidth: "560px",
-            margin: "0 auto 2rem",
-            cursor: "not-allowed",
             boxShadow: "0 0px 25px rgba(199, 167, 94, 0.3)",
             border: "2px solid rgba(199, 167, 94, 0.5)",
             borderRadius: "0.5rem",
           }}
         >
-          <img
-            src={"./assets/images/coming_soon.png"}
-            alt="Critical Fix video coming soon"
-            style={{
-              width: "100%",
-              borderRadius: "8px",
-              opacity: 0.8,
-            }}
-          />
+          <iframe
+            src="https://www.youtube.com/embed/q8T0m5myYO4"
+            title="Critical Fix Overview"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
-        {/* YouTube Embed */}
-        {/* <div className="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Critical Fix Overview"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div> */}
       </Section>
       <Section title="What is Critical Fix?">
         <p>
