@@ -52,10 +52,9 @@ export default function Home() {
             drink... without explaining what a server actually is.
           </p>
 
-          {/* Kickstarter Live CTA */}
+          {/* Kickstarter CTA */}
           <p className="hero-main-list-text">
-            Our Kickstarter is officially LIVE! Back the project today to grab
-            your copy of Critical Fix.
+            Our Kickstarter goes live October 27th at 8:00 AM Pacific Time!
           </p>
           <div style={{ marginTop: "1.5rem", marginBottom: "1rem" }}>
             <a
@@ -76,7 +75,7 @@ export default function Home() {
                 transition: "transform 0.2s ease",
               }}
             >
-              Back Us on Kickstarter
+              View on Kickstarter
             </a>
           </div>
         </div>
@@ -164,7 +163,7 @@ export default function Home() {
       <CFStaticFeature
         image={"./assets/images/whatsinthebox.png"}
         title="Whats in the box?!?!"
-        description={`Critical Fix comes with:\n150+ Cards\n6 Server Types\n8 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
+        description={`Critical Fix comes with:\n150+ Cards\n5 Server Types\n7 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
       />
       <CFImageRow
         items={[
