@@ -1,5 +1,4 @@
 import "./Home.css";
-import MailingListForm from "../components/MailingListForm";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CFShowcase from "../components/CFShowcase";
@@ -53,33 +52,36 @@ export default function Home() {
             drink... without explaining what a server actually is.
           </p>
 
-          {/* Email Sign-up */}
+          {/* Kickstarter Live CTA */}
           <p className="hero-main-list-text">
-            Our Kickstarter launches October 27th!{" "}
+            Our Kickstarter is officially LIVE! Back the project today to grab
+            your copy of Critical Fix.
+          </p>
+          <div style={{ marginTop: "1.5rem", marginBottom: "1rem" }}>
             <a
               href="https://www.kickstarter.com/projects/criticalfix/critical-fix"
               target="_blank"
               rel="noopener noreferrer"
+              className="kickstarter-cta-button"
+              style={{
+                display: "inline-block",
+                padding: "0.9rem 2.2rem",
+                backgroundColor: "#05ce78", // Official Kickstarter green (or swap to #c7a75e for your site's gold)
+                color: "#000000",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+                borderRadius: "0.5rem",
+                textDecoration: "none",
+                boxShadow: "0 0px 20px rgba(5, 206, 120, 0.4)",
+                transition: "transform 0.2s ease",
+              }}
             >
-              Check it out
+              Back Us on Kickstarter
             </a>
-            , or sign up below to get notified when we launch.
-          </p>
-          <p className="hero-main-list-text">
-            Want a free 10-card Holofoil pack? Reserve your copy now for just
-            $1 before the Kickstarter launches:{" "}
-            <a
-              href="https://vip.critical-fix.com/pages/reservation"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              reserve yours here
-            </a>
-            .
-          </p>
-          <MailingListForm />
+          </div>
         </div>
       </section>
+
       {/* YouTube Embed */}
       <Section title="">
         <div
@@ -103,7 +105,7 @@ export default function Home() {
       <Section title="What is Critical Fix?">
         <p>
           Critical Fix is an action packed 2-6 player IT themed card game. Turns
-          are fast and games last less than 1 hour. Hundreds of cards for
+          are fast and games last less than 1 hour. Over 150 cards for
           unlimited combinations!
         </p>
       </Section>
@@ -162,7 +164,7 @@ export default function Home() {
       <CFStaticFeature
         image={"./assets/images/whatsinthebox.png"}
         title="Whats in the box?!?!"
-        description={`Critical Fix comes with:\n~200 Cards\n6 Server Types\n8 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
+        description={`Critical Fix comes with:\n150+ Cards\n6 Server Types\n8 Part Types\n100 Action Cards with Unique Illustrations\n36 Player Token (6 per Player)\n1 6-Sided Die`}
       />
       <CFImageRow
         items={[
