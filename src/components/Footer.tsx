@@ -1,5 +1,4 @@
-import "./Footer.css"; // optional, for any footer-specific styles
-import MailingListForm from "./MailingListForm";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -23,16 +22,41 @@ export default function Footer() {
         </div>
 
         <div className="footer-section">
-          {/* Mailing List */}
-          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+          {/* Kickstarter & Discord */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "1rem",
+            }}
+          >
             <div>
               <h2 className="footer-title">
-                Don't get lost in the backlog. Join to get notified!
+                Don't get lost in the backlog. Back us on Kickstarter!
               </h2>
-              <MailingListForm />
+              <a
+                href="https://www.kickstarter.com/projects/criticalfix/critical-fix"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-block",
+                  marginTop: "0.25rem",
+                  padding: "0.6rem 1.4rem",
+                  backgroundColor: "#05ce78",
+                  color: "#000000",
+                  fontWeight: "bold",
+                  borderRadius: "0.4rem",
+                  textDecoration: "none",
+                  boxShadow: "0 0px 12px rgba(5, 206, 120, 0.35)",
+                }}
+              >
+                View on Kickstarter
+              </a>
             </div>
             {/* Discord */}
-            <p style={{ alignSelf: "end", margin: 0 }}>
+            <p style={{ margin: 0 }}>
               <a
                 href="https://discord.gg/tkVWV5CBzh"
                 target="_blank"
