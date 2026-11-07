@@ -1,5 +1,4 @@
 import "./Home.css";
-import MailingListForm from "../components/MailingListForm";
 import { useEffect, useState } from "react";
 
 type LocationData = {
@@ -28,7 +27,6 @@ function Section({
 }
 
 export default function PlayPage() {
-  const [signedUp, setSignedUp] = useState(false);
   const [userLocationData, setUserLocationData] = useState<LocationData | null>(
     null
   );
@@ -58,25 +56,7 @@ export default function PlayPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    const alreadySignedUp = localStorage.getItem("cf_signed_up") === "true";
-    if (alreadySignedUp) {
-      setSignedUp(true);
-    }
   }, []);
-
-  function handleSignupSuccess() {
-    setSignedUp(true);
-    sendDiscordMessage();
-
-    // Automatically trigger file download
-    const link = document.createElement("a");
-    link.href = "/assets/Critical_Fix_PnP_v2.zip";
-    link.download = "Critical_Fix_PnP_v2.zip";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
 
   return (
     <main className="home">
@@ -143,30 +123,18 @@ export default function PlayPage() {
           </p>
 
           <p>
-            Drop your email below to get access to the demo and join our dev
-            mailing list! You’ll be the first to hear about updates,
-            behind-the-scenes chaos, and when the full game goes live.
+            Click below to download the demo and get started!
           </p>
 
-          {!signedUp && <MailingListForm onSuccess={handleSignupSuccess} />}
-
-          {signedUp && (
-            <>
-              <p className="form-status success">
-                You're in! Here's your download:
-              </p>
-              <a
-                href="/assets/Critical_Fix_PnP_v2.zip"
-                download
-                className="download-button"
-                onClick={sendDiscordMessage}
-              >
-                Download Print & Play ZIP
-              </a>
-            </>
-          )}
+          <a
+            href="/assets/Critical_Fix_PnP_v2.zip"
+            download
+            className="download-button"
+            onClick={sendDiscordMessage}
+          >
+            Download Print & Play ZIP
+          </a>
         </div>
-
 
         <div
           style={{
@@ -202,18 +170,7 @@ export default function PlayPage() {
             🎲 Print and Play Rules
           </a>
         </div>
-
       </Section>
-
-      {/* Tabletop Simulator */}
-      {/* <Section id="tts" title="🕹️ Tabletop Simulator (Coming Soon)">
-        <div className="section-text">
-          <p>
-            We’re working on a digital Tabletop Simulator version so you can try
-            the game online with friends. Stay tuned!
-          </p>
-        </div>
-      </Section> */}
 
       {/* Tabletopia */}
       <Section id="tts" title="🕹️ Tabletopia">
@@ -295,7 +252,6 @@ export default function PlayPage() {
           </div>
         </div>
       </Section>
-
     </main>
   );
-}
+} b
